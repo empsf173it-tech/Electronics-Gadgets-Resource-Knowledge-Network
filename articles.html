@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Fresh perspectives and practical explainers from the electronics world on Circuit Commons.">
+<title>Articles | Circuit Commons</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .article-card{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:white;transition:.2s}
+  .article-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px #20263a0d}
+  .article-thumb{height:160px;display:flex;align-items:center;justify-content:center;font-size:52px}
+  .thumb-purple{background:linear-gradient(135deg,#eeebff,#d9d2ff)}
+  .thumb-peach{background:linear-gradient(135deg,#fff0e6,#ffd4b8)}
+  .thumb-mint{background:linear-gradient(135deg,#e5f4ed,#b8e8ce)}
+  .thumb-sky{background:linear-gradient(135deg,#e4f3ff,#b8deff)}
+  .thumb-rose{background:linear-gradient(135deg,#ffedf0,#ffc2cc)}
+  .thumb-amber{background:linear-gradient(135deg,#fff8e6,#ffe4a0)}
+  .article-body{padding:24px}
+  .article-meta{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+  .article-tag{font-size:9px;font-weight:800;letter-spacing:1.5px;color:var(--accent)}
+  .article-time{font-size:10px;color:var(--muted)}
+  .article-card h3{font-size:18px;margin:0 0 10px;font-family:Manrope,sans-serif;letter-spacing:-.5px;line-height:1.25}
+  .article-card p{font-size:13px;color:var(--muted);line-height:1.75;margin:0 0 16px}
+  .article-card a.read-link{font-size:12px;font-weight:800;color:var(--accent)}
+  .featured-article{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:white;display:grid;grid-template-columns:1fr 1fr;margin-bottom:50px;transition:.2s}
+  .featured-article:hover{box-shadow:0 20px 50px #20263a0e}
+  .featured-thumb{background:linear-gradient(135deg,#6d5dfc,#9d8ffe);display:flex;align-items:center;justify-content:center;font-size:80px;min-height:280px}
+  .featured-body{padding:44px 40px}
+  .featured-body .eyebrow{font-size:9px;letter-spacing:2px}
+  .featured-body h2{font-size:28px;margin:10px 0 14px;font-family:Manrope,sans-serif;letter-spacing:-1px;line-height:1.2}
+  .featured-body p{color:var(--muted);font-size:14px;line-height:1.8;margin-bottom:24px}
+  .featured-body .btn{gap:8px}
+  .series-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:8px}
+  .series-card{border:1px solid var(--line);border-radius:16px;padding:26px;background:white;display:flex;gap:18px;align-items:flex-start;transition:.2s}
+  .series-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .series-num{width:40px;height:40px;border-radius:12px;background:var(--accent);color:white;display:grid;place-items:center;font-weight:800;font-size:15px;flex-shrink:0;font-family:Manrope,sans-serif}
+  .series-card h4{font-family:Manrope,sans-serif;font-size:16px;font-weight:700;margin:0 0 6px;letter-spacing:-.4px}
+  .series-card p{font-size:12px;color:var(--muted);margin:0;line-height:1.6}
+  .series-card .read-link{font-size:11px;font-weight:800;color:var(--accent);display:inline-block;margin-top:10px}
+  .topics-band{background:var(--soft);border-radius:20px;padding:40px;margin-top:60px}
+  .topics-band h3{font-size:22px;margin-top:0}
+  .tag-cloud{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+  .tag{padding:8px 16px;border-radius:50px;background:white;border:1px solid var(--line);font-size:12px;font-weight:600;color:var(--ink);transition:.2s;cursor:pointer}
+  .tag:hover{background:var(--accent);color:white;border-color:var(--accent)}
+  @media(max-width:900px){.articles-grid{grid-template-columns:1fr 1fr}.featured-article{grid-template-columns:1fr}.featured-thumb{min-height:180px}.series-grid{grid-template-columns:1fr}}
+  @media(max-width:600px){.articles-grid,.series-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">✦</span>Circuit Commons</a><button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button><nav class="main-nav"><a class="nav-link " href="index.html">Home</a>
+<a class="nav-link " href="resources.html">Resources</a>
+<a class="nav-link active" href="articles.html">Articles</a>
+<a class="nav-link " href="community.html">Community</a></nav><div class="header-actions"><a class="nav-link" href="login.html">Log in</a><a class="btn btn-small" href="signup.html">Get started</a></div></header>
+<main>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <span class="eyebrow">ELECTRONICS GADGETS RESOURCE &amp; KNOWLEDGE NETWORK</span>
+  <h1>Ideas, explained simply</h1>
+  <p>Fresh perspectives and practical explainers from the electronics world. Written for curious people, not engineers.</p>
+</section>
+
+<!-- FEATURED ARTICLE -->
+<section class="section inner-section">
+  <div class="featured-article">
+    <div class="featured-thumb">⚡</div>
+    <div class="featured-body">
+      <span class="eyebrow">FEATURED · 8 MIN READ</span>
+      <h2>The truth about fast charging — and why your phone still takes an hour.</h2>
+      <p>Manufacturers boast about 120W, 150W, even 240W charging. But real-world charge times tell a different story. We break down how charging protocols really work, why heat is the enemy, and what "GaN" actually means for your charger.</p>
+      <a class="btn" href="signup.html">Read article →</a>
+    </div>
+  </div>
+
+  <!-- LATEST ARTICLES GRID -->
+  <div class="section-heading" style="margin-bottom:22px"><div><span class="eyebrow">LATEST ARTICLES</span><h2>Fresh from the community.</h2></div></div>
+  <div class="articles-grid">
+    <article class="article-card">
+      <div class="article-thumb thumb-rose">🖥️</div>
+      <div class="article-body">
+        <div class="article-meta"><span class="article-tag">DISPLAYS</span><span class="article-time">5 min read</span></div>
+        <h3>How to choose a display</h3>
+        <p>Compare LCD, OLED, resolution, refresh rate and brightness before your next upgrade.</p>
+        <a class="read-link" href="signup.html">Read article →</a>
+      </div>
+    </article>
+    <article class="article-card">
+      <div class="article-thumb thumb-mint">🔋</div>
+      <div class="article-body">
+        <div class="article-meta"><span class="article-tag">POWER</span><span class="article-time">7 min read</span></div>
+        <h3>What really affects battery life?</h3>
+        <p>Learn how screen brightness, processors, battery capacity and charging habits work together.</p>
+        <a class="read-link" href="signup.html">Read article →</a>
+      </div>
+    </article>
+    <article class="article-card">
+      <div class="article-thumb thumb-sky">🎧</div>
+      <div class="article-body">
+        <div class="article-meta"><span class="article-tag">AUDIO</span><span class="article-time">6 min read</span></div>
+        <h3>Understanding wireless audio</h3>
+        <p>A friendly intro to Bluetooth codecs, latency, aptX and active noise cancellation.</p>
+        <a class="read-link" href="signup.html">Read article →</a>
+      </div>
+    </article>
+    <article class="article-card">
+      <div class="article-thumb thumb-amber">🧠</div>
+      <div class="article-body">
+        <div class="article-meta"><span class="article-tag">CHIPS</span><span class="article-time">9 min read</span></div>
+        <h3>What is a Neural Processing Unit?</h3>
+        <p>AI chips are in every flagship phone. Here's what they actually do and why it matters for you.</p>
+        <a class="read-link" href="signup.html">Read article →</a>
+      </div>
+    </article>
+    <article class="article-card">
+      <div class="article-thumb thumb-purple">📡</div>
+      <div class="article-body">
+        <div class="article-meta"><span class="article-tag">NETWORKING</span><span class="article-time">6 min read</span></div>
+        <h3>Wi-Fi 7 vs Wi-Fi 6E — do you need it?</h3>
+        <p>New Wi-Fi standards promise lower latency and faster speeds. We cut through the hype.</p>
+        <a class="read-link" href="signup.html">Read article →</a>
+      </div>
+    </article>
+    <article class="article-card">
+      <div class="article-thumb thumb-peach">📷</div>
+      <div class="article-body">
+        <div class="article-meta"><span class="article-tag">CAMERAS</span><span class="article-time">7 min read</span></div>
+        <h3>Sensor size vs megapixels — what wins?</h3>
+        <p>More megapixels isn't always better. Find out why sensor size, aperture and software matter more.</p>
+        <a class="read-link" href="signup.html">Read article →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ARTICLE SERIES -->
+<section class="section" style="padding-top:20px">
+  <div class="section-heading"><div><span class="eyebrow">SERIES</span><h2>Multi-part deep dives into big topics.</h2></div></div>
+  <div class="series-grid">
+    <div class="series-card">
+      <div class="series-num">1</div>
+      <div>
+        <h4>The Complete Guide to Smartphone Chips</h4>
+        <p>Part 1 of 4 — Understanding ARM architecture, process nodes and why "3nm" is a big deal.</p>
+        <a class="read-link" href="signup.html">Start series →</a>
+      </div>
+    </div>
+    <div class="series-card">
+      <div class="series-num">2</div>
+      <div>
+        <h4>Audio for Non-Audiophiles</h4>
+        <p>Part 1 of 3 — Frequency response, impedance and why "studio quality" is often marketing.</p>
+        <a class="read-link" href="signup.html">Start series →</a>
+      </div>
+    </div>
+    <div class="series-card">
+      <div class="series-num">3</div>
+      <div>
+        <h4>Display Technology Explained</h4>
+        <p>Part 1 of 4 — How pixels work, what "IPS" actually means, and how OLED differs at the panel level.</p>
+        <a class="read-link" href="signup.html">Start series →</a>
+      </div>
+    </div>
+    <div class="series-card">
+      <div class="series-num">4</div>
+      <div>
+        <h4>Home Networking From Scratch</h4>
+        <p>Part 1 of 5 — Modems, routers, mesh systems and how data flows through your home.</p>
+        <a class="read-link" href="signup.html">Start series →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TAG CLOUD -->
+<section class="section" style="padding-top:0">
+  <div class="topics-band">
+    <h3>Browse by topic</h3>
+    <div class="tag-cloud">
+      <div class="tag">Displays</div>
+      <div class="tag">Battery & Charging</div>
+      <div class="tag">Audio</div>
+      <div class="tag">Processors</div>
+      <div class="tag">Cameras</div>
+      <div class="tag">Networking</div>
+      <div class="tag">Storage</div>
+      <div class="tag">AI & Machine Learning</div>
+      <div class="tag">Wearables</div>
+      <div class="tag">Smart Home</div>
+      <div class="tag">Ports & Connectors</div>
+      <div class="tag">Gaming</div>
+    </div>
+  </div>
+</section>
+
+<!-- NOTICE -->
+<section class="section" style="padding-top:0">
+  <div class="notice"><strong>Want more?</strong> Create a free account to read full series, bookmark articles and get new content in your feed. <a href="signup.html">Join for free →</a></div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band"><div><span class="eyebrow">MORE ARTICLES EVERY WEEK</span><h2>Never miss a new explainer.</h2></div><a class="btn btn-light" href="signup.html">Create a free account →</a></section>
+
+</main>
+<footer class="footer"><div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark">✦</span>Circuit Commons</a><p>Electronics Gadgets Resource &amp; Knowledge Network</p></div><div class="footer-links"><a href="index.html">Home</a>
+<a href="resources.html">Resources</a>
+<a href="articles.html">Articles</a>
+<a href="community.html">Community</a><a href="login.html">Login</a></div><span class="copyright">© 2026 Circuit Commons. Built for curious minds.</span></footer>
+<script src="js/main.js"></script>
+</body></html>

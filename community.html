@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Connect with curious makers, students and gadget enthusiasts on Circuit Commons. Share questions, discoveries and useful resources.">
+<title>Community | Circuit Commons</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .community-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .comm-card{background:white;border:1px solid var(--line);border-radius:18px;padding:30px;transition:.2s}
+  .comm-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px #20263a0c}
+  .comm-icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:24px;margin-bottom:20px}
+  .comm-icon.purple{background:#eeebff}
+  .comm-icon.mint{background:#e5f4ed}
+  .comm-icon.peach{background:#fff0e6}
+  .comm-icon.sky{background:#e4f3ff}
+  .comm-icon.rose{background:#ffedf0}
+  .comm-icon.amber{background:#fff8e6}
+  .comm-card .card-kicker{font-size:9px;letter-spacing:1.5px}
+  .comm-card h3{font-size:19px;margin:8px 0 10px;font-family:Manrope,sans-serif;letter-spacing:-.5px}
+  .comm-card p{font-size:13px;color:var(--muted);line-height:1.75;margin:0 0 14px}
+  .comm-card a.read-link{font-size:12px;font-weight:800;color:var(--accent)}
+  .activity-feed{background:white;border:1px solid var(--line);border-radius:20px;overflow:hidden}
+  .activity-header{padding:22px 26px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+  .activity-header h3{margin:0;font-size:17px;font-family:Manrope,sans-serif;letter-spacing:-.5px}
+  .activity-header a{font-size:11px;font-weight:800;color:var(--accent)}
+  .activity-item{padding:18px 26px;border-bottom:1px solid var(--line);display:flex;align-items:flex-start;gap:14px;transition:.15s}
+  .activity-item:last-child{border-bottom:none}
+  .activity-item:hover{background:var(--soft)}
+  .activity-avatar{width:36px;height:36px;border-radius:50%;flex-shrink:0;display:grid;place-items:center;font-size:18px;background:#f0efeb}
+  .activity-content h4{font-size:13px;font-weight:700;margin:0 0 4px;font-family:Manrope,sans-serif}
+  .activity-content p{font-size:12px;color:var(--muted);margin:0;line-height:1.6}
+  .activity-time{font-size:10px;color:#aab0b8;margin-left:auto;flex-shrink:0;padding-top:2px}
+  .stats-band{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:50px 0 0}
+  .stat-block{background:white;border:1px solid var(--line);border-radius:16px;padding:28px;text-align:center}
+  .stat-block strong{display:block;font-family:Manrope,sans-serif;font-size:32px;font-weight:800;color:var(--accent);letter-spacing:-1px}
+  .stat-block span{font-size:12px;color:var(--muted)}
+  .guidelines-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .guideline-card{display:flex;gap:16px;background:white;border:1px solid var(--line);border-radius:14px;padding:22px;align-items:flex-start}
+  .guideline-icon{font-size:24px;flex-shrink:0}
+  .guideline-card h4{font-family:Manrope,sans-serif;font-size:15px;font-weight:700;margin:0 0 6px;letter-spacing:-.4px}
+  .guideline-card p{font-size:12px;color:var(--muted);margin:0;line-height:1.6}
+  .join-band{background:linear-gradient(135deg,#f3f1ff,#fff);border:1px solid var(--line);border-radius:22px;padding:52px;text-align:center;margin-top:60px}
+  .join-band h2{font-size:34px;margin-bottom:10px;font-family:Manrope,sans-serif;letter-spacing:-1.2px}
+  .join-band p{color:var(--muted);font-size:15px;max-width:500px;margin:0 auto 28px;line-height:1.8}
+  .join-actions{display:flex;justify-content:center;gap:18px;flex-wrap:wrap}
+  @media(max-width:900px){.community-grid{grid-template-columns:1fr 1fr}.stats-band{grid-template-columns:1fr 1fr}.guidelines-grid{grid-template-columns:1fr}}
+  @media(max-width:600px){.community-grid,.stats-band{grid-template-columns:1fr}.join-actions{flex-direction:column;align-items:center}}
+</style>
+</head>
+<body>
+<header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">✦</span>Circuit Commons</a><button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button><nav class="main-nav"><a class="nav-link " href="index.html">Home</a>
+<a class="nav-link " href="resources.html">Resources</a>
+<a class="nav-link " href="articles.html">Articles</a>
+<a class="nav-link active" href="community.html">Community</a></nav><div class="header-actions"><a class="nav-link" href="login.html">Log in</a><a class="btn btn-small" href="signup.html">Get started</a></div></header>
+<main>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <span class="eyebrow">ELECTRONICS GADGETS RESOURCE &amp; KNOWLEDGE NETWORK</span>
+  <h1>Learn better, together</h1>
+  <p>Connect with curious makers, students and gadget enthusiasts. Share questions, discoveries and useful resources in a welcoming, jargon-free space.</p>
+</section>
+
+<!-- COMMUNITY CARDS -->
+<section class="section inner-section">
+  <div class="community-grid">
+    <article class="comm-card">
+      <div class="comm-icon purple">💬</div>
+      <span class="card-kicker">DISCUSSION</span>
+      <h3>Ask the community</h3>
+      <p>Get help understanding a specification or troubleshooting a device. No question is too basic here.</p>
+      <a class="read-link" href="signup.html">Join discussions →</a>
+    </article>
+    <article class="comm-card">
+      <div class="comm-icon mint">🔗</div>
+      <span class="card-kicker">CONTRIBUTE</span>
+      <h3>Share a resource</h3>
+      <p>Recommend a tutorial, reference or useful learning link and help others in the community grow.</p>
+      <a class="read-link" href="signup.html">Share a link →</a>
+    </article>
+    <article class="comm-card">
+      <div class="comm-icon peach">🤝</div>
+      <span class="card-kicker">CONNECT</span>
+      <h3>Join a learning circle</h3>
+      <p>Explore focused topic groups with people who share your curiosity and learn at your own pace.</p>
+      <a class="read-link" href="signup.html">Find your circle →</a>
+    </article>
+    <article class="comm-card">
+      <div class="comm-icon sky">📋</div>
+      <span class="card-kicker">CURATE</span>
+      <h3>Build a reading list</h3>
+      <p>Save resources and articles into personal lists, then share those lists with the community.</p>
+      <a class="read-link" href="signup.html">Start curating →</a>
+    </article>
+    <article class="comm-card">
+      <div class="comm-icon rose">✍️</div>
+      <span class="card-kicker">CREATE</span>
+      <h3>Write an explainer</h3>
+      <p>Have a knack for making things clear? Submit your own explainer and get feedback from peers.</p>
+      <a class="read-link" href="signup.html">Start writing →</a>
+    </article>
+    <article class="comm-card">
+      <div class="comm-icon amber">🏆</div>
+      <span class="card-kicker">EARN</span>
+      <h3>Badges & recognition</h3>
+      <p>Get recognized for helpful contributions, quality answers and long-term participation in the network.</p>
+      <a class="read-link" href="signup.html">View achievements →</a>
+    </article>
+  </div>
+</section>
+
+<!-- COMMUNITY STATS -->
+<section class="section" style="padding-top:0">
+  <div class="section-heading"><div><span class="eyebrow">BY THE NUMBERS</span><h2>A growing, active community.</h2></div></div>
+  <div class="stats-band">
+    <div class="stat-block"><strong>12.4K</strong><span>Active members</span></div>
+    <div class="stat-block"><strong>3,200+</strong><span>Questions answered</span></div>
+    <div class="stat-block"><strong>870+</strong><span>Shared resources</span></div>
+    <div class="stat-block"><strong>48</strong><span>Learning circles</span></div>
+  </div>
+</section>
+
+<!-- RECENT ACTIVITY FEED -->
+<section class="section" style="padding-top:0">
+  <div class="section-heading"><div><span class="eyebrow">RECENT ACTIVITY</span><h2>See what's happening right now.</h2></div></div>
+  <div class="activity-feed">
+    <div class="activity-header"><h3>Community Feed</h3><a href="signup.html">See all activity →</a></div>
+    <div class="activity-item">
+      <div class="activity-avatar">👩</div>
+      <div class="activity-content">
+        <h4>Priya asked: "Does USB-C always mean fast charging?"</h4>
+        <p>8 replies · Networking & Connectivity · Community verified answer</p>
+      </div>
+      <div class="activity-time">2 min ago</div>
+    </div>
+    <div class="activity-item">
+      <div class="activity-avatar">👨</div>
+      <div class="activity-content">
+        <h4>Marcus shared: "Great comparison of SSD types for laptops"</h4>
+        <p>Shared a link · Storage Deep Dive · 14 saves</p>
+      </div>
+      <div class="activity-time">18 min ago</div>
+    </div>
+    <div class="activity-item">
+      <div class="activity-avatar">🧑</div>
+      <div class="activity-content">
+        <h4>Arjun wrote: "My take on why refresh rate matters less than you think"</h4>
+        <p>Community article · Display Technology · 43 reactions</p>
+      </div>
+      <div class="activity-time">1 hr ago</div>
+    </div>
+    <div class="activity-item">
+      <div class="activity-avatar">👩‍💻</div>
+      <div class="activity-content">
+        <h4>Suhani answered: "The difference between Hz and nits for brightness"</h4>
+        <p>Best answer · Displays · Earned a Clarity badge</p>
+      </div>
+      <div class="activity-time">3 hrs ago</div>
+    </div>
+    <div class="activity-item">
+      <div class="activity-avatar">👨‍🎓</div>
+      <div class="activity-content">
+        <h4>Rohan started a learning circle: "Wearables & Health Tech Beginners"</h4>
+        <p>New circle · 12 members joined · Open to all</p>
+      </div>
+      <div class="activity-time">6 hrs ago</div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY GUIDELINES -->
+<section class="section" style="padding-top:0">
+  <div class="section-heading"><div><span class="eyebrow">COMMUNITY GUIDELINES</span><h2>A space built on respect and curiosity.</h2></div></div>
+  <div class="guidelines-grid">
+    <div class="guideline-card"><div class="guideline-icon">🤗</div><div><h4>Be welcoming</h4><p>All levels are welcome here. No gatekeeping, no elitism — we were all beginners once.</p></div></div>
+    <div class="guideline-card"><div class="guideline-icon">✅</div><div><h4>Be accurate</h4><p>Share facts, not assumptions. If you're not sure, say so — honesty helps everyone learn better.</p></div></div>
+    <div class="guideline-card"><div class="guideline-icon">💡</div><div><h4>Be helpful</h4><p>Answer the question asked. Point to good resources. Help people take the next step forward.</p></div></div>
+    <div class="guideline-card"><div class="guideline-icon">🚫</div><div><h4>No spam or self-promotion</h4><p>This is a learning community, not a marketplace. Keep content relevant and useful.</p></div></div>
+  </div>
+</section>
+
+<!-- JOIN BAND -->
+<section class="section" style="padding-top:0">
+  <div class="join-band">
+    <span class="eyebrow">READY TO JOIN?</span>
+    <h2>Be part of something curious.</h2>
+    <p>It's free to join, free to contribute, and free to keep learning forever. Sign up and say hello to a community that gets it.</p>
+    <div class="join-actions">
+      <a class="btn" href="signup.html">Create a free account →</a>
+      <a class="text-link" href="articles.html">Read articles first ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- NOTICE -->
+<section class="section" style="padding-top:10px;padding-bottom:0">
+  <div class="notice"><strong>Already a member?</strong> Log in to see your circles, discussions and saved resources. <a href="login.html">Log in →</a></div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band" style="margin-top:60px"><div><span class="eyebrow">GROW TOGETHER</span><h2>Your next big tech insight is one question away.</h2></div><a class="btn btn-light" href="signup.html">Join the community →</a></section>
+
+</main>
+<footer class="footer"><div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark">✦</span>Circuit Commons</a><p>Electronics Gadgets Resource &amp; Knowledge Network</p></div><div class="footer-links"><a href="index.html">Home</a>
+<a href="resources.html">Resources</a>
+<a href="articles.html">Articles</a>
+<a href="community.html">Community</a><a href="login.html">Login</a></div><span class="copyright">© 2026 Circuit Commons. Built for curious minds.</span></footer>
+<script src="js/main.js"></script>
+</body></html>

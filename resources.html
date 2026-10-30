@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Find clear electronics guides, practical references and learning paths for the gadgets and technologies you use every day.">
+<title>Resources | Circuit Commons</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .filter-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px}
+  .filter-btn{padding:9px 20px;border-radius:50px;border:1px solid var(--line);background:white;font-size:12px;font-weight:700;color:var(--muted);cursor:pointer;transition:.2s}
+  .filter-btn.active,.filter-btn:hover{background:var(--accent);color:white;border-color:var(--accent)}
+  .resource-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .res-card{border:1px solid var(--line);border-radius:18px;padding:27px;background:white;transition:.2s}
+  .res-card:hover{transform:translateY(-4px);box-shadow:0 15px 35px #20263a0b}
+  .res-icon{width:43px;height:43px;border-radius:13px;display:grid;place-items:center;font-size:22px;margin-bottom:18px}
+  .res-icon.purple{background:#eeebff;color:var(--accent)}
+  .res-icon.peach{background:#fff0e6;color:#e06c2d}
+  .res-icon.mint{background:#e5f4ed;color:#168c6c}
+  .res-icon.sky{background:#e4f3ff;color:#1a73e8}
+  .res-icon.rose{background:#ffedf0;color:#d94068}
+  .res-icon.amber{background:#fff8e6;color:#c97d00}
+  .res-level{display:inline-block;font-size:9px;font-weight:800;letter-spacing:1.5px;color:var(--accent);margin-bottom:6px}
+  .res-card h3{font-size:18px;margin:0 0 8px;font-family:Manrope,sans-serif;letter-spacing:-.5px}
+  .res-card p{font-size:13px;color:var(--muted);line-height:1.75;margin:0 0 14px}
+  .res-card a{font-size:12px;font-weight:800;color:var(--accent)}
+  .highlight-band{background:linear-gradient(135deg,#f3f1ff,#fff);border:1px solid var(--line);border-radius:22px;padding:48px;margin:60px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .highlight-band h2{font-size:32px;margin-bottom:10px;font-family:Manrope,sans-serif;letter-spacing:-1px}
+  .highlight-band p{color:var(--muted);font-size:14px;line-height:1.8;margin-bottom:22px}
+  .highlight-points{display:grid;gap:12px}
+  .highlight-point{display:flex;align-items:flex-start;gap:12px;font-size:13px;color:var(--ink)}
+  .highlight-point .check-mark{flex-shrink:0}
+  .highlight-visual{height:220px;background:linear-gradient(135deg,#6d5dfc,#9d8ffe);border-radius:16px;display:grid;place-items:center;font-size:72px}
+  .tools-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .tool-card{background:white;border:1px solid var(--line);border-radius:14px;padding:22px;text-align:center;transition:.2s}
+  .tool-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .tool-card .icon{font-size:28px;margin-bottom:10px}
+  .tool-card h4{font-family:Manrope,sans-serif;font-size:14px;font-weight:700;margin:0 0 6px;letter-spacing:-.4px}
+  .tool-card p{font-size:11px;color:var(--muted);margin:0;line-height:1.5}
+  @media(max-width:900px){.resource-grid-3{grid-template-columns:1fr 1fr}.tools-grid{grid-template-columns:1fr 1fr}.highlight-band{grid-template-columns:1fr}}
+  @media(max-width:600px){.resource-grid-3,.tools-grid{grid-template-columns:1fr}.highlight-visual{display:none}}
+</style>
+</head>
+<body>
+<header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">✦</span>Circuit Commons</a><button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button><nav class="main-nav"><a class="nav-link " href="index.html">Home</a>
+<a class="nav-link active" href="resources.html">Resources</a>
+<a class="nav-link " href="articles.html">Articles</a>
+<a class="nav-link " href="community.html">Community</a></nav><div class="header-actions"><a class="nav-link" href="login.html">Log in</a><a class="btn btn-small" href="signup.html">Get started</a></div></header>
+<main>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <span class="eyebrow">ELECTRONICS GADGETS RESOURCE &amp; KNOWLEDGE NETWORK</span>
+  <h1>Explore the resource library</h1>
+  <p>Find clear explanations, practical references and learning paths for the gadgets and technologies you use every day.</p>
+</section>
+
+<!-- MAIN RESOURCES -->
+<section class="section inner-section">
+  <!-- Filter bar -->
+  <div class="filter-bar">
+    <button class="filter-btn active" id="filter-all">All Topics</button>
+    <button class="filter-btn" id="filter-beginner">Beginner</button>
+    <button class="filter-btn" id="filter-intermediate">Intermediate</button>
+    <button class="filter-btn" id="filter-advanced">Advanced</button>
+  </div>
+
+  <!-- 6-card grid (was 4) -->
+  <div class="resource-grid-3">
+    <article class="res-card">
+      <div class="res-icon purple">📱</div>
+      <span class="res-level">BEGINNER</span>
+      <h3>Smartphone fundamentals</h3>
+      <p>Understand processors, displays, refresh rates, cameras and battery technology in everyday language.</p>
+      <a href="signup.html">Explore more →</a>
+    </article>
+    <article class="res-card">
+      <div class="res-icon peach">💻</div>
+      <span class="res-level">INTERMEDIATE</span>
+      <h3>Laptop components</h3>
+      <p>A practical guide to CPUs, RAM, storage options, graphics cards and the ports that matter.</p>
+      <a href="signup.html">Explore more →</a>
+    </article>
+    <article class="res-card">
+      <div class="res-icon mint">🎧</div>
+      <span class="res-level">BEGINNER</span>
+      <h3>Audio technology</h3>
+      <p>Explore codecs, drivers, noise cancellation, wireless audio protocols and what makes headphones "good."</p>
+      <a href="signup.html">Explore more →</a>
+    </article>
+    <article class="res-card">
+      <div class="res-icon sky">🌐</div>
+      <span class="res-level">INTERMEDIATE</span>
+      <h3>Networking basics</h3>
+      <p>Learn Wi-Fi standards (6, 6E, 7), routers, Bluetooth versions and how connected devices talk.</p>
+      <a href="signup.html">Explore more →</a>
+    </article>
+    <article class="res-card">
+      <div class="res-icon rose">🖥️</div>
+      <span class="res-level">BEGINNER</span>
+      <h3>Display technology</h3>
+      <p>LCD vs OLED vs AMOLED, resolution, refresh rate, HDR levels and why it all matters for your eyes.</p>
+      <a href="signup.html">Explore more →</a>
+    </article>
+    <article class="res-card">
+      <div class="res-icon amber">⚡</div>
+      <span class="res-level">ADVANCED</span>
+      <h3>Power & charging tech</h3>
+      <p>Dive into USB Power Delivery, GaN chargers, wired vs wireless speed tradeoffs and battery longevity.</p>
+      <a href="signup.html">Explore more →</a>
+    </article>
+  </div>
+</section>
+
+<!-- HIGHLIGHT BAND -->
+<section class="section" style="padding-top:0">
+  <div class="highlight-band">
+    <div>
+      <span class="eyebrow">WHY CIRCUIT COMMONS</span>
+      <h2>Learning that actually sticks.</h2>
+      <p>Every resource is written in plain language, reviewed by our community, and structured so you build real understanding — not just trivia.</p>
+      <div class="highlight-points">
+        <div class="highlight-point"><div class="check-mark">✓</div><span>No engineering background required</span></div>
+        <div class="highlight-point"><div class="check-mark">✓</div><span>Short, digestible sections — read in 5–10 minutes</span></div>
+        <div class="highlight-point"><div class="check-mark">✓</div><span>Community-reviewed for accuracy</span></div>
+        <div class="highlight-point"><div class="check-mark">✓</div><span>Free forever, no paywall on core content</span></div>
+      </div>
+      <div style="margin-top:24px"><a class="btn" href="signup.html">Start learning free →</a></div>
+    </div>
+    <div class="highlight-visual">🔬</div>
+  </div>
+</section>
+
+<!-- EXTRA RESOURCES (more cards) -->
+<section class="section" style="padding-top:0">
+  <div class="section-heading"><div><span class="eyebrow">MORE TOPICS</span><h2>Expand your knowledge further.</h2></div></div>
+  <div class="resource-grid-3">
+    <article class="res-card">
+      <div class="res-icon purple">🧠</div>
+      <span class="res-level">INTERMEDIATE</span>
+      <h3>Processors & chipsets</h3>
+      <p>Cores, clock speeds, process nodes — understand the brain inside every device.</p>
+      <a href="signup.html">Explore more →</a>
+    </article>
+    <article class="res-card">
+      <div class="res-icon mint">📷</div>
+      <span class="res-level">BEGINNER</span>
+      <h3>Camera technology</h3>
+      <p>Sensor sizes, aperture, optical zoom vs digital zoom, and what makes night mode work.</p>
+      <a href="signup.html">Explore more →</a>
+    </article>
+    <article class="res-card">
+      <div class="res-icon sky">💾</div>
+      <span class="res-level">ADVANCED</span>
+      <h3>Storage deep dive</h3>
+      <p>HDD, SSD, NVMe, eMMC — understand read/write speeds, endurance and when it matters.</p>
+      <a href="signup.html">Explore more →</a>
+    </article>
+  </div>
+</section>
+
+<!-- QUICK REFERENCE TOOLS -->
+<section class="section" style="padding-top:0">
+  <div class="section-heading"><div><span class="eyebrow">QUICK REFERENCE</span><h2>Handy tools for every gadget buyer.</h2></div></div>
+  <div class="tools-grid">
+    <div class="tool-card"><div class="icon">📊</div><h4>Spec Glossary</h4><p>Decode any tech spec in seconds with plain-English definitions.</p></div>
+    <div class="tool-card"><div class="icon">🆚</div><h4>Compare Standards</h4><p>USB-C vs Lightning vs Thunderbolt — side-by-side comparisons.</p></div>
+    <div class="tool-card"><div class="icon">🗺️</div><h4>Learning Paths</h4><p>Structured topic sequences from beginner to advanced.</p></div>
+    <div class="tool-card"><div class="icon">🔖</div><h4>Save & Bookmark</h4><p>Sign in to save resources and build your personal knowledge list.</p></div>
+  </div>
+</section>
+
+<!-- NOTICE -->
+<section class="section" style="padding-top:0">
+  <div class="notice"><strong>Keep exploring.</strong> Create an account to save useful topics and build your personal gadget knowledge list. <a href="signup.html">Join for free →</a></div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band"><div><span class="eyebrow">NEVER STOP LEARNING</span><h2>Unlock your full learning dashboard.</h2></div><a class="btn btn-light" href="signup.html">Create a free account →</a></section>
+
+</main>
+<footer class="footer"><div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark">✦</span>Circuit Commons</a><p>Electronics Gadgets Resource &amp; Knowledge Network</p></div><div class="footer-links"><a href="index.html">Home</a>
+<a href="resources.html">Resources</a>
+<a href="articles.html">Articles</a>
+<a href="community.html">Community</a><a href="login.html">Login</a></div><span class="copyright">© 2026 Circuit Commons. Built for curious minds.</span></footer>
+<script src="js/main.js"></script>
+</body></html>
